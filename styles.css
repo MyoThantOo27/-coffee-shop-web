@@ -1,0 +1,147 @@
+
+/* General Menu Section Styling */
+.menu-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.menu-section h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill the area */
+}
+
+/* Search Box Styling */
+.search-box input {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.card-description,
+.tasting-notes,
+.brewing-methods {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Quantity Selector Styling */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+/* Add to Cart Button */
+/* Quantity Buttons */
+.minus-btn,
+.plus-btn {
+    font-size: 1.2rem; /* Larger text for better visibility */
+    padding: 0.5rem 1rem; /* Increase clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.minus-btn:hover,
+.plus-btn:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: #fff;
+    transform: scale(1.05); /* Subtle scale effect */
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    font-size: 1.2rem; /* Larger font size */
+    padding: 0.8rem 1.5rem; /* Comfortable padding */
+    border-radius: 10px; /* Softer edges */
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0645a9; /* Darker blue for hover */
+    
+}
+
+.card-img-top {
+            width: 100%;
+            height: 400px; /* Set a fixed height */
+            object-fit: cover; /* Ensures images maintain aspect ratio and fill the area */
+        }
+   
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .search-box input {
+        width: 80%;
+    }
+
+    .quantity-selector {
+        justify-content: center;
+    }
+}
+
