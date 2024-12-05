@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Coffee Shop</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+   
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-white">BEAN BOUTIQUE</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coffee.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="signin.html"><i class="fas fa-user"></i> Sign In</a></li>
+                        <li class="nav-item" id="logoutLink" style="display:none;"><a class="nav-link" href="#" onclick="logOut()">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar End -->
+    
+<body>
+</section>
+
+
+
+  <!-- Upcoming Events Section -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4">Upcoming Events</h3>
+    <div class="row">
+      <!-- Latte Art Workshop -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="latte-art-workshop.jpg" class="card-img-top" alt="Latte Workshop">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Latte Art Workshop</h5>
+            <p class="card-text">Learn to create beautiful latte art with our expert baristas!</p>
+            <p class="card-text">Time: 10:00 AM - 12:00 PM</p>
+            <p class="card-text">Location: Bean Boutique Cafe, Downtown</p>
+            <span class="badge bg-warning text-dark mb-2">Happening Soon!</span>
+            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coffee Tasting 101 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="coffee-testing.jpg" class="card-img-top" alt="Coffee Tasting">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Coffee Tasting 101</h5>
+            <p class="card-text">Discover unique flavors from around the world!</p>
+            <p class="card-text">Time: 2:00 PM - 3:30 PM</p>
+            <p class="card-text">Location: Bean Boutique Cafe, Uptown</p>
+            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brew Methods Workshop -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="brewmethod.webp" class="card-img-top" alt="Brew Methods Workshop">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Brew Methods Workshop</h5>
+            <p class="card-text">Master different brewing techniques with hands-on guidance.</p>
+            <p class="card-text">Time: 5:00 PM - 7:00 PM</p>
+            <p class="card-text">Location: Bean Boutique Workshop Room</p>
+            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register for an Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <select name="workshop" required>
+                        <option value="" disabled selected>Select a workshop</option>
+                        <option value="latte-art">Latte Art Workshop</option>
+                        <option value="brew-basics">Brewing Basics</option>
+                        <option value="coffee-tasting">Coffee Tasting Event</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <!-- Footer Start -->
+  <footer class="footer bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-3">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Mandalay</p>
+                <p><i class="fas fa-phone-alt"></i> 09400050000</p>
+                <p><i class="fas fa-envelope"></i> CafeReverie@gmail.com</p>
+            </div>
+            <!-- Social Links -->
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <a class="btn btn-outline-light btn-sm me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-sm me-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-sm me-2" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- Opening Hours -->
+            <div class="col-md-3">
+                <h4>Opening Hours</h4>
+                <p>Mon-Fri: 8AM - 8PM</p>
+                <p>Sat-Sun: 7AM - 8PM</p>
+            </div>
+            <!-- Newsletter -->
+            <div class="col-md-3">
+                <h4>Newsletter</h4>
+                <form>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <p class="text-center mt-4">© 2024 KOPPEE - All Rights Reserved</p>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+
+</html>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Check if user is signed in
+        if (!isLoggedIn) {
+            alert('You have to sign in to the signin.html'); // Alert message if not signed in
+            return;
+        }
+
+        // If user is signed in, proceed with registration
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const eventSelect = document.getElementById('eventSelect').value;
+
+        // Simulate sending an email confirmation
+        const message = `Thanks for your participation, ${name}! An email with event start details has been sent to ${email}. Enjoy the ${eventSelect}!`;
+        alert(message); // Show alert with success message
+
+        // Reset the form
+        this.reset();
+    });
+</script>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
